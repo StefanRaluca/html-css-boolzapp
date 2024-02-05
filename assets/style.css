@@ -1,10 +1,84 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Lato;
-   
+    background-color: var(--boolzapp--primary--background);
 }
+
+:root {
+
+    --boolzapp--secondary--background: rgba(0, 150, 136, 1);
+    --boolzapp--primary--msg: rgba(213, 249, 186, 1);
+    --boolzapp--primary--background: rgba(215, 219, 215, 1);
+    --boolzapp--icons: rgba(158, 158, 158, 1);
+    --boolzapp--dark: rgb(15, 15, 15);
+    --boolzapp--light: rgba(255, 255, 255, 1);
+    --boolzapp--notifications: rgba(142, 218, 252, 1);
+}
+
+
+[class*="col-"] {
+    padding: 1rem;
+    border: 1px dashed black;
+}
+
+
+.container {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    padding: 2rem;
+}
+
+.container_left {
+    width: 20%;
+
+}
+
+.container_right {
+    width: 80%;
+
+}
+
+
+
+.col-12 {
+    background-color: blueviolet;
+    height: 50px;
+}
+
+.search {
+    height: 35px;
+    background-color: coral;
+}
+
+
+.contacts {
+    height: 350px;
+    background-color: aqua;
+    border: 1px dashed;
+}
+
+
+.col-6 {
+    background-color: azure;
+    height: 30px;
+}
+
+.center_container {
+    height: 385px;
+    background-color: cadetblue;
+}
+
+
+
+@media screen and (max-width: 991px) {}
+
+
+
+
+@media screen and (max-width: 540px) {}
