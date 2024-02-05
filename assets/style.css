@@ -5,8 +5,10 @@
 }
 
 body {
+    height: 100vh;
     font-family: Lato;
     background-color: var(--boolzapp--primary--background);
+
 }
 
 :root {
@@ -21,18 +23,27 @@ body {
 }
 
 
+/* start style */
+
+
+/* start col design */
 [class*="col-"] {
     padding: 1rem;
     border: 1px dashed black;
 }
 
-
+/* start container  */
 .container {
-    width: 90%;
+    width: 100%;
     display: flex;
     margin: auto;
     padding: 2rem;
+
 }
+
+
+/* division in 2 container  */
+
 
 .container_left {
     width: 20%;
@@ -44,30 +55,55 @@ body {
 
 }
 
-
+/* start columns */
 
 .col-12 {
     background-color: blueviolet;
     height: 50px;
+    width: 100%;
+
 }
 
+/* .col-6 {
+    background-color: azure;
+    height: 30px;
+} */
+
+
+
+/* start search bar  left container */
 .search {
     height: 35px;
     background-color: coral;
 }
 
-
+/* start contacts left container */
 .contacts {
     height: 350px;
     background-color: aqua;
     border: 1px dashed;
 }
 
-
-.col-6 {
-    background-color: azure;
-    height: 30px;
+.center_container {
+    position: relative;
 }
+
+.msg_top {
+    position: absolute;
+    top: 60px;
+    left: 250px;
+    background-color: antiquewhite;
+    right: 30px;
+}
+
+.msg_bottom {
+    position: absolute;
+    top: 150px;
+    right: 250px;
+    left: 30px;
+    background-color: blue;
+}
+
 
 .center_container {
     height: 385px;
@@ -76,9 +112,47 @@ body {
 
 
 
-@media screen and (max-width: 991px) {}
+@media screen and (max-width: 991px) {
+    .col-1 {
+        width: calc(100% / 12);
+    }
+
+    .container_left {
+        width: auto;
+    }
+
+    .container {
+        margin: auto;
+    }
+}
 
 
 
 
-@media screen and (max-width: 540px) {}
+@media screen and (max-width: 540px) {
+    .container {
+        width: 100%;
+    }
+
+    .container_left {
+        display: none;
+    }
+
+    .col-sm-12 {
+        width: 70%;
+    }
+
+    .msg_top {
+        position: absolute;
+        top: 20px;
+        left: 90px;
+        background-color: antiquewhite;
+    }
+
+    .msg_left {
+        position: absolute;
+        left: 20px;
+        background-color: blue;
+        bottom: 30px;
+    }
+}
