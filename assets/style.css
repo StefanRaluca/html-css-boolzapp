@@ -5,12 +5,13 @@
 }
 
 body {
+    background: linear-gradient(to top, var(--boolzapp--primary--background) 85%,var(--boolzapp--secondary--background) 80%);
+    background-repeat: no-repeat;
     height: 100vh;
     font-family: Lato;
     background-color: var(--boolzapp--primary--background);
-
+ 
 }
-
 :root {
 
     --boolzapp--secondary--background: rgba(0, 150, 136, 1);
@@ -118,20 +119,20 @@ body {
     }
 
     .container_left {
-        width: auto;
+        width: 33.33px;
     }
 
-    .container {
-        margin: auto;
+    .container_right{
+        width: 95%;
     }
+
 }
 
 
-
-
 @media screen and (max-width: 540px) {
-    .container {
+    .container_right {
         width: 100%;
+        margin: auto;
     }
 
     .container_left {
