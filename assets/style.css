@@ -110,6 +110,12 @@ body {
     font-size: 17px;
     color: var(--boolzapp--icons);
 }
+.time{
+    position: absolute;
+    top: 90px;
+    right: 1px;
+    font-size: 15px;
+}
 
 
 .d-flex {
