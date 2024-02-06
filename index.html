@@ -16,78 +16,205 @@
     <title>Boolzapp</title>
 </head>
 
-<body>
+<body class="debug">
 
-    <!-- container main -->
-    <div class="container">
+    <div id="app">
+        <div class="left">
 
-        <!-- container left or side_bar -->
-        <div class="container_left">
-
-            <div class="row">
-                <!-- start columns -->
-
-                <!-- first column with user and actions -->
-                <div class="col-12  col-1 d-flex">
-                    <div class="user ">
-                        <img src="./assets/img/avatar_io_360.jpg" alt="profile-pic">
-                    </div>
-                    <div class="actions ">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
+            <div class="user_profile d-flex">
+                <div class="user ">
+                    <img src="./assets/img/avatar_io_360.jpg" alt="profile-pic">
                 </div>
-                <!-- end first column -->
-                <!-- start second column with notifications end alarm -->
-                <div class="notifications col-12 col-1  d-flex">
-                    <div class="alarm">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-                    <div class="alarm_text">
-                        <span> Ricevi notifiche di nuovi messaggi</span>
-                        <a href="#">Attiva notifiche desktop</a>
-                    </div>
+                <div class="actions ">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
 
-                <!-- start third column -->
-                <div class="col-12 search  col-1">
+            </div>
+            <!-- /.user_profile -->
+            <div class="notifications d-flex">
 
+                <div class="alarm">
+                    <i class="fa-solid fa-bell-slash"></i>
                 </div>
-                <div class="contacts col-1">
+                <div class="alarm_text">
+                    <span> Ricevi notifiche di nuovi messaggi</span>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
 
+            </div>
+            <!-- /.notifications -->
+            <div class="search d-flex">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+
+            </div>
+            <!-- /.search -->
+            <div class="contacts_list">
+
+                <div class="contact d-flex ">
+                    <img src="./assets/img/avatar_1_360.jpg" alt="img">
+
+                    <div class="text  ">
+
+                        <div class="contact_name d-flex ">
+                            <h4>Michele</h4>
+                            <span>16:15</span>
+
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
                 </div>
+                <div class="contact d-flex">
+                    <div class="contact d-flex">
+                        <img src="./assets/img/avatar_2_360.jpg" alt="">
+                    </div>
+                    <div class="text ">
+                        <div class="contact_name d-flex">
+                            <h4>Fabio</h4>
+                            <span>16:15</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="contact d-flex">
+                    <div class="contact d-flex">
+                        <img src="./assets/img/avatar_3_360.jpg" alt="">
+                    </div>
+                    <div class="text ">
+                        <div class="contact_name d-flex">
+                            <h4>Samuele</h4>
+                            <span>16:15</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="contact d-flex">
+                    <div class="contact d-flex">
+                        <img src="./assets/img/avatar_4_360.jpg" alt="">
+                    </div>
+                    <div class="text ">
+                        <div class="contact_name d-flex">
+                            <h4>Alessandro B.</h4>
+                            <span>16:15</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="contact d-flex">
+                    <div class="contact d-flex">
+                        <img src="./assets/img/avatar_5_360.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="contact_name d-flex">
+                            <h4>Alessandro L.</h4>
+                            <span>16:15</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
+                <div class="contact d-flex ">
+                    <img src="./assets/img/avatar_6_360.jpg" alt="img">
+
+                    <div class="text  ">
+
+                        <div class="contact_name d-flex cover ">
+                            <h4> Paola</h4>
+                            <span>16:15</span>
+
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="contact d-flex ">
+                    <img src="./assets/img/avatar_7_360.jpg" alt="img">
+
+                    <div class="text  ">
+
+                        <div class="contact_name d-flex cover ">
+                            <h4>Paolo</h4>
+                            <span>16:15</span>
+
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="contact d-flex ">
+                    <img src="./assets/img/avatar_8_360.jpg" alt="img">
+
+                    <div class="text  ">
+
+                        <div class="contact_name d-flex cover ">
+                            <h4> Luca </h4>
+                            <span>16:15</span>
+
+                        </div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
 
+        <!-- /.contacts_list -->
 
-        <div class="container_right">
 
 
-            <div class="top_container">
-                <div class="row">
-                    <div class="col-12"></div>
+        <div class="right">
+
+            <div class="contact_profile d-flex">
+
+
+                <div class="top_contact d-flex">
+                    <div class="foto_contact">
+                        <img src="./assets/img/avatar_1_360.jpg" alt="">
+                    </div>
+
+                    <div class="details d-flex">
+                        <h4>Michele</h4>
+                        <span>Ultimo accesso oggi alle 16.26</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="center_container">
-                <div class="msg_top col-sm-12">
+                <div class="motion d-flex">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+
+            </div>
+            <!-- /.contact_profile -->
+
+            <div class="chat">
+
+
+                <div class="sent">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae quia culpa architecto ducimus
 
                 </div>
-                <div class="msg_bottom col-sm-12">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, voluptatibus doloremque ipsa officia
-                    s.
-                </div>
-            </div>
+                <!-- /.sent -->
+                <div class="received">
 
-            <div class="bottom_container">
-                <div class="row">
-                    <div class="col-12"></div>
-                </div>
-            </div>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae quia culpa architecto ducimus
 
+                </div>
+                <!-- /.received -->
+
+            </div>
+            <!-- /.chat -->
+            <div class="prompt d-flex">
+
+                <i class="fa-regular fa-face-smile col-1"></i>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <i class="fa-solid fa-microphone col-1"></i>
+
+            </div>
+            <!-- /.prompt -->
         </div>
 
     </div>
