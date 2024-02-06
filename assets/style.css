@@ -32,122 +32,85 @@ body {
     margin: 1rem auto 2rem;
     max-width: 1200px;
     display: flex;
+}
 
+/* SELETTORE NESTED */
+.left {
+    width: 450px;
+    height: 100%;
 
-    @media (max-width: 991px) {
-        height: 100%;
-        margin: 0;
+    /*
+    .left > div:not(:nth-child(4))        
+    */
+    >div:not(:nth-child(4)) {
+        height: 70px;
     }
+}
 
+.contacts_list {
+    height: calc(100% - 175px);
+    overflow-y: auto;
+}
 
-    .left {
-        width: 320px;
-        height: 100%;
+.contact {
+    padding: .5rem;
+    gap: .5rem;
+}
 
-
-
-        &>div:not(:nth-child(4)) {
-            height: 70px;
-        }
-
-    }
-
-    &> :nth-child(4) {
-        height: calc(100% - 70px);
-        overflow-y: scroll;
-    }
-
-
-
-    @media screen and (max-width: 991px) {
-        width: 120px;
-
-        &>.notifications,
-        &>.search {
-            display: none;
-        }
-
-        &>.contacts_list {
-            height: calc(100% - 70px);
-        }
-
-        .user {
-            justify-content: center;
-        }
-
-        .contact {
-            justify-content: center;
-            border-bottom: 1px groove lightgray;
-        }
-
-        .cover {
-            display: none;
-        }
-
-        .text {
-            display: none;
-        }
-
-        .actions {
-            display: none;
-        }
-
-        .chat {
-            padding: 2rem 2rem;
-        }
-    }
-
-    @media screen and (max-width: 540px) {
-        display: none;
-    }
-
-
-
+.contact img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .right {
     flex-grow: 1;
-
-
-    >.contact_profile,
-    >.prompt {
-        height: 70px;
-    }
-
-    >.chat {
-        height: calc(100% - 140px);
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-
-        &>div {
-            min-height: 140px;
-        }
-
-        >.sent {
-            align-self: flex-end;
-        }
-
-        >.received {
-            align-self: flex-start;
-        }
-
-    }
-
-
 }
 
-
-
-
-
-img {
-
-    width: 60px;
-    height: 60px;
-
+.right .contact_profile,
+.right .prompt {
+    height: 70px;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 10px;
 }
+
+.right .chat {
+    height: calc(100% - 140px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    >div {
+        min-height: 140px;
+    }
+
+    .sent {
+        align-self: flex-end;
+        width: 50%;
+        background-color: var(--boolzapp--primary--msg);
+        position: relative;
+        padding: 25px;
+    }
+
+    .received {
+        align-self: flex-start;
+        width: 50%;
+        background-color: var(--boolzapp--light);
+        position: relative;
+        padding: 25px;
+    }
+}
+
+.chevron {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 17px;
+    color: var(--boolzapp--icons);
+}
+
 
 .d-flex {
     display: flex;
@@ -159,6 +122,7 @@ img {
     border-right: 1px solid lightgray;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
     background-color: var(--boolzapp--primary--background);
 }
 
@@ -186,10 +150,19 @@ img {
 .notifications {
     gap: 1rem;
     background-color: var(--boolzapp--notifications);
+    padding: .5rem;
 }
 
 
 /* start alarm section */
+.alarm {
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-top: .2rem;
+}
+
 .alarm i {
     background-color: var(--boolzapp--light);
     border-radius: 50px;
@@ -205,21 +178,27 @@ img {
     flex-direction: column;
     padding-left: 0.5rem;
     gap: 0.3rem;
+    font-size: .9rem;
 }
 
 .alarm_text a {
     color: var(--boolzapp--icons);
-    font-size: 15px;
+    font-size: .9rem;
 
 }
 
 .alarm_text span {
     font-weight: 600;
 }
+
 /* start search bar */
 .search {
     background-color: var(--boolzapp--light);
+    height: 35px !important;
+    align-items: center;
+    gap: 10px;
 }
+
 
 .search i {
     background-color: var(--boolzapp--light);
@@ -235,6 +214,7 @@ img {
     width: 100%;
     height: 25px;
 }
+
 /* start section with contacts list */
 .contact img {
     width: 50px;
@@ -268,6 +248,11 @@ img {
     background-color: var(--boolzapp--primary--background);
 }
 
+.top_contact {
+    gap: 10px;
+    align-items: center;
+}
+
 .foto_contact {
     width: 60px;
     height: 60px;
@@ -299,6 +284,7 @@ img {
     color: var(--boolzapp--icons);
 
 }
+
 /* start area chat with msg */
 .chat {
     background-image: url(./img/mine.jpg);
@@ -306,6 +292,14 @@ img {
     overflow-y: auto;
     padding: 2rem 4rem;
 }
+
+.sent,
+.received {
+    border-radius: 1.5rem;
+    padding: 1.2rem;
+
+}
+
 /* start prompt */
 .prompt {
     justify-content: space-between;
@@ -318,4 +312,84 @@ img {
 
 .prompt input {
     width: 90%;
+    height: 75%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+    #app {
+        height: 100%;
+        margin: 0;
+    }
+
+
+    .left {
+        width: 80px;
+    }
+
+    .notifications,
+    .search {
+        display: none;
+    }
+
+    .contacts_list {
+        height: calc(100% - 70px);
+    }
+
+    .user {
+        justify-content: center;
+    }
+
+    .contact {
+        justify-content: center;
+        border-bottom: 1px groove lightgray;
+    }
+
+    .cover {
+        display: none;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .chat {
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right .chat {
+        padding: 1rem;
+        overflow-y: hidden
+    
+    }
+
+    .right .chat .sent {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .right .chat .received {
+        width: 100%;
+        margin-top: 15px;
+
+    }
+
 }
