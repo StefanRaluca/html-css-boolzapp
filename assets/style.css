@@ -110,11 +110,49 @@ body {
     font-size: 17px;
     color: var(--boolzapp--icons);
 }
-.time{
+
+.time {
     position: absolute;
     top: 90px;
     right: 1px;
     font-size: 15px;
+}
+
+
+.chevron:hover {
+    cursor: pointer;
+}
+
+.chevron:hover .details_msg {
+    display: block;
+    cursor: pointer;
+}
+
+
+.details_msg {
+    font-size: 15px;
+    position: absolute;
+    width: 180px;
+    top: 40px;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    color: var(--boolzapp--dark);
+    display: none;
+    background-color: var(--boolzapp--light);
+}
+
+ul {
+    list-style: none;
+}
+
+
+li {
+    padding: 10px 0;
+}
+
+li:hover {
+    background-color: var(--boolzapp--light);
 }
 
 
@@ -384,7 +422,6 @@ body {
     .right .chat {
         padding: 1rem;
         overflow-y: hidden
-    
     }
 
     .right .chat .sent {
